@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Survey Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Customer Survey form</h1>
+    <div id="main">
+        <form id="surveyForm">
+            <label>Enter First Name :</label><br>
+            <input type="text" placeholder="Enter First Name" id="fname" required><br>
+            <label>Enter Last Name :</label><br>
+            <input type="text" placeholder="Enter Last Name" id="lname" required><br>
+
+            <label>Select Gender :</label><br>
+            <div required>
+                <input type="checkbox" id="male" name="Gender" value="Male">Male <br>
+                <input type="checkbox" id="female" name="Gender" value="Female">Female
+            </div><br>
+
+
+            <label>Date of Birth :</label><br>
+            <input type="date" id="bdate" name="bdate" value="bdate" required> <br>
+
+            <label>Seleect Country :</label><br>
+            <select id="country" required>
+                <option value="">Select</option>
+                <option value="india">India</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="afganistan">Afganistan</option>
+                <option value="srilanka">Srilanka</option>
+                <option value="nepal">Nepal</option>
+                <option value="china">China</option>
+                <option value="hr">Indonesia</option>
+                <option value="iran">Iran</option>
+                <option value="iraq">Iraq</option>
+                <option value="japan">Japan</option>
+                <option value="qatar">Qatar</option>
+                <option value="singapore">Singapore</option>
+            </select> <br>
+
+            <label>Enter Mail Id :</label><br>
+            <input type="email" placeholder="Enter Mail Id" id="mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required><br>
+            <label>Profession :</label><br>
+            <input type="text" placeholder="Enter Profession" id="profession" required><br>
+
+            <label>Enter Phone No :</label><br>
+            <input type="tel" placeholder="Enter Phone Number" id="number" pattern="\d{10}" required><br>
+
+            <div class="button-row">
+                <button id="submit" type="submit" value="submit">Submit</button>
+                <button id="reset" type="button" value="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal">
+        <div class="modal-box">
+            <h2>Customer Survey Form</h2>
+            <div id="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Date of Birth</th>
+                            <th>Country</th>
+                            <th>Mail Id </th>
+                            <th>Profession </th>
+                            <th>Phone No</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <!-- append here -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="index.js"></script>
